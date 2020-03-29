@@ -1,22 +1,20 @@
 package com.skilldistillery.foodtruck;
 
 import java.util.Scanner;
-import java.io.IOException;
 
 public class FoodTruckApplication {
 	Scanner input = new Scanner(System.in);
-	int MAX_FT = 5;
+
 	private FoodTruck daFoodTruck[] = new FoodTruck[5];
+	
 
 	public static void main(String[] args) {
 		FoodTruckApplication ftApp = new FoodTruckApplication();
 		ftApp.MakeMeAFoodTruckBaby();
-//		ftApp.showMeStats();
-//		ftApp.whyBeAverage();
-//		ftApp.superStar();
 		ftApp.makeMenu();
 	}
-
+// input up to five food trucks
+//	with Name, Cuisine, and Rating.
 	public void MakeMeAFoodTruckBaby() {
 		for (int i = 0; i < daFoodTruck.length; i++) {
 			System.out.println("\n* * * * TYPE quit when asked for Food Truck's name to exit * * * * ");
@@ -24,7 +22,7 @@ public class FoodTruckApplication {
 					+ " (i.e. Food Truck's name)??? : \n\t");
 			String nomDeGuerre = input.nextLine();
 			nomDeGuerre = nomDeGuerre.toLowerCase();
-
+//  Quit logic to Menu
 			if (!nomDeGuerre.equals("quit")) {
 				System.out.println("In one word describe your cuisine (i.e. Mexican, Vietmanese, Korean): \n\t");
 				String nomNomNom = input.nextLine();
@@ -39,15 +37,34 @@ public class FoodTruckApplication {
 
 				} else if (showMeYourStars > 5) {
 					System.out.println("WOW WOW WOW A " + showMeYourStars
-							+ " rating!!! Obviously your are a SUPERSTAR with your own rating system\n");
+							+ " rating!!! Obviously your are a SUPERSTAR with your own rating system!!\n\n");
 				}
 				daFoodTruck[i] = new FoodTruck(nomDeGuerre, nomNomNom, showMeYourStars);
 				input.nextLine();
 
 			} else {
-				System.out.println(
-						"* * * * * * * * You have choosen to quit Food Truck creation and continue * * * * * * * *\n");
-//				 would you like to fill out a comment card to assist us to be a better food truck?
+				System.out.println("++********************************************************************************************");
+				System.out.println("+ *                                                                                        * +");
+				System.out.println("* * * * * * * * ~ ~ ~   YOU HAVE CHOOSEN TO QUIT FOOD TRUCK CREATION   ~ ~ ~ ~ * * * * * * * *");
+				System.out.println("+ *                                                                                        * +");
+				System.out.println("++********************************************************************************************");
+				System.out.println("+ *                                                                                        * +");
+				System.out.println("+ + +  Would you like to fill out a comment card to assist us to be a better food truck? + + +");
+				System.out.println("+ *                                                                                        * +");
+				System.out.println("+ + +                  Before you continue to the Main Menu?                             + + +");
+				System.out.println("+ *                                                                                        * +");
+				System.out.println("+ + + * *                 1) YES                   2) NO                             * * + + +");
+				System.out.println("+ *                                                                                        * +");
+				System.out.println("++********************************************************************************************");
+
+				int cc = input.nextInt();
+				if (cc == 1) {
+					System.out.println("\n\n\t I am sorry, we are out and someone forgot to reorder more\n\n");
+				} 
+				else {
+					System.out.println("\n\n\t I understand, I dont like to fill them out either, I mean who really looks at them?\n\n");
+				}
+				
 				break;
 			}
 
@@ -59,13 +76,13 @@ public class FoodTruckApplication {
 		for (FoodTruck foodTruck : daFoodTruck) {
 			if (foodTruck != null) {
 
-				System.out.println("\tUnique ID:" + foodTruck.getYouAreUnique());
+				System.out.println("\t\tUnique ID:" + foodTruck.getYouAreUnique());
 
-				System.out.println("\tNAME: " + foodTruck.getNomDeGuerre());
+				System.out.println("\t\tNAME: " + foodTruck.getNomDeGuerre());
 
-				System.out.println("\tCUISINE: " + foodTruck.getNomNomNom());
+				System.out.println("\t\tCUISINE: " + foodTruck.getNomNomNom());
 
-				System.out.println("\tRATING: " + foodTruck.getShowMeYourStars() + "\n");
+				System.out.println("\t\tRATING: " + foodTruck.getShowMeYourStars() + "\n");
 
 				System.out.println("_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_\n\n");
 
@@ -103,7 +120,9 @@ public class FoodTruckApplication {
 				}
 			}
 		}
-		System.out.println("The Highest Reviewed Food Truck is : " + highReview);
+		System.out.println("\n\n\tThe Highest Reviewed Food Truck is : " + highReview.toString());
+		System.out.println();
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n");
 	}
 
 	public void makeMenu() {
@@ -123,6 +142,7 @@ public class FoodTruckApplication {
 
 			int menuChoice = input.nextInt();
 			switch (menuChoice) {
+			
 			case 1:
 				showMeStats();
 				continue;
@@ -133,18 +153,20 @@ public class FoodTruckApplication {
 				superStar();
 				continue;
 			default:
-			
-				System.out.println("\n\n\n*****************************************************************");
-				System.out.println("**                                                             **");
-				System.out.println("**      Thank you for engaging with Food Truck Application!!   **");
-				System.out.println("**                                                             **");
-				System.out.println("**                    	GOODBYE!!                              **");
-				System.out.println("**                                                             **");
-				System.out.println("*****************************************************************");
+
+				System.out.println("\n\n\n\t*****************************************************************");
+				System.out.println("\t**                                                             **");
+				System.out.println("\t**      Thank you for engaging with Food Truck Application!!   **");
+				System.out.println("\t**                                                             **");
+				System.out.println("\t**                    	GOODBYE!!                              **");
+				System.out.println("\t**                                                             **");
+				System.out.println("\t*****************************************************************");
 				input.close();
 
 				System.exit(0);
 			}
 		}
 	}
+
+	
 }

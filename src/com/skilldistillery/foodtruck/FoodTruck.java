@@ -21,10 +21,6 @@ public class FoodTruck {
 		this.showMeYourStars = showMeYourStars;
 	}
 
-
-	
-
-
 	public String getNomDeGuerre() {
 		return nomDeGuerre;
 	}
