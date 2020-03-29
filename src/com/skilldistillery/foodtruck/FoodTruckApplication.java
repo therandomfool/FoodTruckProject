@@ -61,7 +61,7 @@ public class FoodTruckApplication {
 
 				System.out.println("\tCUISINE: " + foodTruck.getNomNomNom());
 
-				System.out.println("\tRATING" + foodTruck.getShowMeYourStars() + "\n");
+				System.out.println("\tRATING: " + foodTruck.getShowMeYourStars() + "\n");
 
 				System.out.println("_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_\n\n");
 
