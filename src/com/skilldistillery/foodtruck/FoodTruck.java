@@ -22,6 +22,9 @@ public class FoodTruck {
 	}
 
 
+	
+
+
 	public String getNomDeGuerre() {
 		return nomDeGuerre;
 	}
@@ -49,6 +52,16 @@ public class FoodTruck {
 
 	public void setShowMeYourStars(Double showMeYourStars) {
 		this.showMeYourStars = showMeYourStars;
+	}
+
+
+	public int getYouAreUnique() {
+		return youAreUnique;
+	}
+
+
+	public void setYouAreUnique(int youAreUnique) {
+		this.youAreUnique = youAreUnique;
 	}
 
 
