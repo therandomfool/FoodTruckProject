@@ -10,8 +10,10 @@ public class FoodTruckApplication {
 	public static void main(String[] args) {
 		FoodTruckApplication ftApp = new FoodTruckApplication();
 		ftApp.MakeMeAFoodTruckBaby();
-		ftApp.showMeStats();
-		ftApp.whyBeAverage();
+//		ftApp.showMeStats();
+//		ftApp.whyBeAverage();
+//		ftApp.superStar();
+		ftApp.makeMenu();
 	}
 
 	public void MakeMeAFoodTruckBaby() {
@@ -74,14 +76,66 @@ public class FoodTruckApplication {
 		Double output = 0.0;
 		int counter = 0;
 		for (int i = 0; i < daFoodTruck.length; i++) {
-				Double x = (double) counter;
+			Double x = (double) counter;
 			if (daFoodTruck[i] != null) {
 				counter++;
 				output = output + daFoodTruck[i].getShowMeYourStars();
 			}
 		}
 		Double average = output / counter;
-		System.out.printf("Average rating of the " + daFoodTruck.length + " Food Trucks is: %.2f",  average);
+		System.out.printf("Average rating of the " + daFoodTruck.length + " Food Trucks is: %.2f", average);
+		System.out.println("\n\n");
 	}
 
+	public void superStar() {
+		double highScore = 0.0;
+		String highReview = " ";
+		double highComp = 0.0;
+		int i = 0;
+		for (int j = 0; j < daFoodTruck.length; j++) {
+			FoodTruck foodTruck = daFoodTruck[j];
+			if (foodTruck != null) {
+				highComp = foodTruck.getShowMeYourStars();
+				if (highComp > highScore) {
+					highScore = highComp;
+					highReview = foodTruck.getNomDeGuerre();
+				}
+			}
+		}
+		System.out.println("The Highest Reviewed Food Truck is : " + highReview);
+	}
+
+	public void makeMenu() {
+//		int x = 0;
+		while (true) {
+			System.out.println("*****************************************************");
+			System.out.println("**                                                 **");
+			System.out.println("**    1) List all existing Food Trucks             **");
+			System.out.println("**                                                 **");
+			System.out.println("**    2) See the average rating of Food Trucks     **");
+			System.out.println("**                                                 **");
+			System.out.println("**    3) Display the highest-rated Food Trucks     **");
+			System.out.println("**                                                 **");
+			System.out.println("**    4) Quit the program                          **");
+			System.out.println("**                                                 **");
+			System.out.println("*****************************************************");
+
+			int menuChoice = input.nextInt();
+			switch (menuChoice) {
+			case 1:
+				showMeStats();
+				continue;
+			case 2:
+				whyBeAverage();
+				continue;
+			case 3:
+				superStar();
+				continue;
+			default:
+				System.out.println("Thank you for engaging with Food Truck Application!!");
+				input.close();
+				System.exit(0);
+			}
+		}
+	}
 }
