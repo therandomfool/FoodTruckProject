@@ -33,7 +33,7 @@
 - String and StringBuilder
 - Encapsulation
 - Objects and Classes
-- Inheritance in Java
+- Inheritance in Java (Not Polymorphism, That comes later)
 - printf()
 - Object Initialization
 - Visibility
