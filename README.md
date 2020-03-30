@@ -26,6 +26,7 @@
 - Java
 - Terminal Commands
 - GitHub/Git
+- Zoom
 
 
 ### Lessons Learned
@@ -34,8 +35,14 @@
 - Encapsulation
 - Objects and Classes
 - Inheritance in Java (But not Polymorphism yet, that comes later)
-- printf()
+- printf() - is your friend
 - Object Initialization
 - Visibility
-- Null Point Exception isn't scary, its just telling me, at a certain point of my code there is an object reference that has a null value, I am not handleing it properly.
+- Null Point Exception isn't scary, its just telling me, at a certain point of my code there is an object reference that has a null value, I am not handeling it properly.
 - In capturing the Highest Review how to capture non-sequential data.   Up to this point it has all been very sequential/linear data we have trying to represent.  This required a different approach to capturing the Highest Review Score
+-Zoom Collaberation. communication, problem solving and team building through Zoom video interaction
+-Setters and Getters
+-Constructors
+- toString()
+- Eclipse sometimes makes it too easy
+
