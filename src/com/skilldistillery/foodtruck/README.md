@@ -39,3 +39,4 @@
 - Visibility
 - Null Point Exception isn't scary, its just telling me, at a certain point of my code there is an object reference that has a null value.
 - In capturing the Highest Review how to capture non-sequential data.   Up to this point it has all been very sequential/linear data we have trying to represent.  This required a different approach to capturing the Highest Review Score
+- static fields
