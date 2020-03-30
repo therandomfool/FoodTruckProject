@@ -21,9 +21,8 @@ public class FoodTruckApplication {
 			System.out.println("What is the name for your new mobile culinary platform #" + (i + 1)
 					+ " (i.e. Food Truck's name)??? : \n\t");
 			String nomDeGuerre = input.nextLine();
-			nomDeGuerre = nomDeGuerre.toLowerCase();
 //  Quit logic to Menu
-			if (!nomDeGuerre.equals("quit")) {
+			if (!nomDeGuerre.equalsIgnoreCase("quit")) {
 				System.out.println("In one word describe your cuisine (i.e. Mexican, Vietmanese, Korean): \n\t");
 				String nomNomNom = input.nextLine();
 
@@ -59,7 +58,7 @@ public class FoodTruckApplication {
 
 				int cc = input.nextInt();
 				if (cc == 1) {
-					System.out.println("\n\n\t I am sorry, we are out and someone forgot to reorder more\n\n");
+					System.out.println("\n\n\t I am sorry, we are out of comment cards currently and someone forgot to reorder more!\n\n");
 				} 
 				else {
 					System.out.println("\n\n\t I understand, I dont like to fill them out either, I mean who really looks at them?\n\n");
@@ -102,7 +101,9 @@ public class FoodTruckApplication {
 			}
 		}
 		Double average = output / counter;
-		System.out.printf("Average rating of the " + daFoodTruck.length + " Food Trucks is: %.2f", average);
+		System.out.printf("\n\tAverage rating of the " + daFoodTruck.length + " Food Trucks is: %.2f", average);
+		System.out.println();
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n");
 		System.out.println("\n\n");
 	}
 
@@ -125,9 +126,11 @@ public class FoodTruckApplication {
 		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n");
 	}
 
-	public void makeMenu() {
-//		
+	
+//	Continuation Menu
+	public void makeMenu() {	
 		while (true) {
+			System.out.println("\n\n");
 			System.out.println("*****************************************************");
 			System.out.println("**                                                 **");
 			System.out.println("**    1) List all existing Food Trucks             **");
